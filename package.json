@@ -16,7 +16,8 @@
     "npm",
     "publish",
     "package.json",
-    "fields"
+    "fields",
+    "clean"
   ],
   "license": "MIT",
   "bugs": {

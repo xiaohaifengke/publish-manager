@@ -9,14 +9,14 @@ program
   .usage(`<command> [option]`)
 
 program
-  .command('prepublish')
+  .command('cleanse')
   .description('do something at prepublish hook')
   .action(() => {
     require('../lib/cleanse-package-json')()
   })
 
 program
-  .command('postpublish')
+  .command('restore')
   .description('do something at postpublish hook')
   .action(() => {
     require('../lib/restore-package-json')()
