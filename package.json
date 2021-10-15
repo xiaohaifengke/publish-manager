@@ -1,0 +1,31 @@
+{
+  "name": "publish-manager",
+  "version": "0.0.1",
+  "description": "Process the fields in the package.json at npm publish.",
+  "author": "Jhail<Jhail@foxmail.com>",
+  "main": "/bin/publish-manager",
+  "bin": {
+    "publish-manager": "./bin/publish-manager"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaohaifengke/publish-manager.git"
+  },
+  "keywords": [
+    "node",
+    "npm",
+    "publish",
+    "package.json",
+    "fields"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiaohaifengke/publish-manager/issues"
+  },
+  "homepage": "https://github.com/xiaohaifengke/publish-manager#readme",
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "commander": "^8.2.0",
+    "fs-extra": "^10.0.0"
+  }
+}
