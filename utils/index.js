@@ -21,6 +21,11 @@ function generateFilenameByPath(filepath) {
  * @returns {*}
  */
 function getConfig() {
+  const defaultConfig = {
+    indent: 2,
+    addFields: {},
+    removeFields: {}
+  }
   const cwd = process.cwd()
   for(let configFileName of configFile) {
     const configFilePath = path.resolve(cwd, configFileName)
@@ -31,11 +36,11 @@ function getConfig() {
       } else {
         config = fs.readJsonSync(configFilePath)
       }
-      return config
+      return Object.assign(defaultConfig, config)
     }
   }
   const originalPkgPath = path.resolve(cwd, './package.json')
-  return fs.pathExistsSync(originalPkgPath) && require(originalPkgPath)['publish-manager']
+  return Object.assign(defaultConfig, fs.pathExistsSync(originalPkgPath) && require(originalPkgPath)['publish-manager'])
 }
 
 module.exports = {
