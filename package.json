@@ -11,6 +11,11 @@
     "type": "git",
     "url": "git+https://github.com/xiaohaifengke/publish-manager.git"
   },
+  "files": [
+    "bin",
+    "lib",
+    "utils"
+  ],
   "keywords": [
     "node",
     "npm",
